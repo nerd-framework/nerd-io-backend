@@ -51,12 +51,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nerd-framework/nerd-http.git",
-                "reference": "f382f32924a32978f08b1a7cc391a88795da19d9"
+                "reference": "495fac21d4d423dba17a8ddf3009e20c4b3c6643"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nerd-framework/nerd-http/zipball/f382f32924a32978f08b1a7cc391a88795da19d9",
-                "reference": "f382f32924a32978f08b1a7cc391a88795da19d9",
+                "url": "https://api.github.com/repos/nerd-framework/nerd-http/zipball/495fac21d4d423dba17a8ddf3009e20c4b3c6643",
+                "reference": "495fac21d4d423dba17a8ddf3009e20c4b3c6643",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 }
             ],
             "description": "HTTP Request and Response for Nerd Framework",
-            "time": "2016-10-13 08:18:38"
+            "time": "2016-10-13 10:57:13"
         }
     ],
     "packages-dev": [
