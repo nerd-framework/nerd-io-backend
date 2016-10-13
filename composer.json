@@ -1,0 +1,21 @@
+{
+  "name": "nerd-framework/nerd-io-backend",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roman Lakhtadyr",
+      "email": "roman.lakhtadyr@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "nerd-framework/nerd-contracts": "v0.1.x-dev",
+    "nerd-framework/nerd-http": "dev-master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.7",
+    "phpunit/phpunit": "^5.6"
+  }
+}
