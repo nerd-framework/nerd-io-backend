@@ -29,11 +29,15 @@ class GenericHttpOutput implements OutputContract
     public function sendData($data)
     {
         echo $data;
-        flush();
     }
 
     public function isHeadersSent()
     {
         return headers_sent();
+    }
+
+    public function flush()
+    {
+        flush();
     }
 }

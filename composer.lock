@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03d0df3ee2904ee0e931a19f9a804326",
-    "content-hash": "4b968a6b422a3575020a22c05d463f3c",
+    "hash": "505666e6fc89d9255d3f2a0aa09d71ba",
+    "content-hash": "12e72cc10fccfb56b08796bdf6fc64f1",
     "packages": [
         {
             "name": "nerd-framework/nerd-contracts",
-            "version": "v0.1.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nerd-framework/nerd-contracts.git",
-                "reference": "531d4f5c658647e9e3eda8ce5c243be2c94499f5"
+                "reference": "c56621db26a7f01e0c46374c0d347bd8d39b8976"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nerd-framework/nerd-contracts/zipball/531d4f5c658647e9e3eda8ce5c243be2c94499f5",
-                "reference": "531d4f5c658647e9e3eda8ce5c243be2c94499f5",
+                "url": "https://api.github.com/repos/nerd-framework/nerd-contracts/zipball/c56621db26a7f01e0c46374c0d347bd8d39b8976",
+                "reference": "c56621db26a7f01e0c46374c0d347bd8d39b8976",
                 "shasum": ""
             },
             "require-dev": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "Framework contracts used in Nerd Framework",
-            "time": "2016-10-12 17:21:00"
+            "time": "2016-10-13 17:53:51"
         },
         {
             "name": "nerd-framework/nerd-http",
@@ -51,16 +51,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nerd-framework/nerd-http.git",
-                "reference": "495fac21d4d423dba17a8ddf3009e20c4b3c6643"
+                "reference": "d4c411ee326dcde74c854983e1ed0053b9206d63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nerd-framework/nerd-http/zipball/495fac21d4d423dba17a8ddf3009e20c4b3c6643",
-                "reference": "495fac21d4d423dba17a8ddf3009e20c4b3c6643",
+                "url": "https://api.github.com/repos/nerd-framework/nerd-http/zipball/d4c411ee326dcde74c854983e1ed0053b9206d63",
+                "reference": "d4c411ee326dcde74c854983e1ed0053b9206d63",
                 "shasum": ""
             },
             "require": {
-                "nerd-framework/nerd-contracts": "v0.1.x-dev",
+                "nerd-framework/nerd-contracts": "dev-master",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -88,7 +88,7 @@
                 }
             ],
             "description": "HTTP Request and Response for Nerd Framework",
-            "time": "2016-10-13 10:57:13"
+            "time": "2016-10-13 18:00:00"
         }
     ],
     "packages-dev": [

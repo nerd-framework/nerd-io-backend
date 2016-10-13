@@ -11,7 +11,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "nerd-framework/nerd-contracts": "v0.1.x-dev",
+    "nerd-framework/nerd-contracts": "dev-master",
     "nerd-framework/nerd-http": "dev-master"
   },
   "require-dev": {
