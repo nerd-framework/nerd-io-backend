@@ -37,7 +37,7 @@ class GenericIOTest extends TestCase
     {
         $output = new GenericHttpOutput();
         $content = 'hello_world';
-        $stream = fopen('data://text/plain,' . $content,'r');
+        $stream = fopen('data://text/plain,' . $content, 'r');
 
         $output->sendData($stream);
 
