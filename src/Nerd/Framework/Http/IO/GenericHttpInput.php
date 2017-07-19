@@ -27,7 +27,12 @@ class GenericHttpInput implements InputContract
      */
     public function getBody()
     {
-        return stream_get_contents($this->getStream());
+        try {
+            $stream = $this->getStream();
+            return stream_get_contents($stream);
+        } finally {
+            fclose($stream);
+        }
     }
 
     /**

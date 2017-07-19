@@ -3,6 +3,7 @@
 namespace tests;
 
 use Nerd\Framework\Http\IO\GenericHttpInput;
+use Nerd\Framework\Http\IO\GenericHttpOutput;
 use PHPUnit\Framework\TestCase;
 
 class GenericIOTest extends TestCase
@@ -20,5 +21,26 @@ class GenericIOTest extends TestCase
 
         $this->assertEquals('cookieValue', $request->getCookie('cookieName'));
         $this->assertEquals('postValue', $request->getPostParameter('postName'));
+    }
+
+    public function testSendStringResponse()
+    {
+        $output = new GenericHttpOutput();
+        $content = 'hello_world';
+
+        $output->sendData($content);
+
+        $this->expectOutputString($content);
+    }
+
+    public function testSendStreamResponse()
+    {
+        $output = new GenericHttpOutput();
+        $content = 'hello_world';
+        $stream = fopen('data://text/plain,' . $content,'r');
+
+        $output->sendData($stream);
+
+        $this->expectOutputString($content);
     }
 }

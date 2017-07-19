@@ -6,11 +6,21 @@ use Nerd\Framework\Http\Response\CookieContract;
 
 class GenericHttpOutput implements OutputContract
 {
+    /**
+     * @var resource
+     */
+    private $output;
+
+    public function __construct()
+    {
+        $this->output = fopen('php://output', 'w');
+    }
+
     public function sendCookie(CookieContract $cookie)
     {
-        $setter = $cookie->isRaw() ? 'setrawcookie' : 'setcookie';
+        $set = $cookie->isRaw() ? 'setrawcookie' : 'setcookie';
 
-        $setter(
+        $set(
             $cookie->getName(),
             $cookie->getValue(),
             $cookie->getExpire(),
@@ -28,7 +38,11 @@ class GenericHttpOutput implements OutputContract
 
     public function sendData($data)
     {
-        echo $data;
+        if (is_resource($data)) {
+            stream_copy_to_stream($data, $this->output);
+        } else {
+            fwrite($this->output, $data);
+        }
     }
 
     public function isHeadersSent()
@@ -38,6 +52,11 @@ class GenericHttpOutput implements OutputContract
 
     public function flush()
     {
-        flush();
+        fflush($this->output);
+    }
+
+    public function close()
+    {
+        fclose($this->output);
     }
 }
